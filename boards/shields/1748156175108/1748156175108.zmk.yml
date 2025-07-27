@@ -1,0 +1,14 @@
+
+file_format: "1"
+id: 1748156175108
+name: 1748156175108
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - 1748156175108_left
+  - 1748156175108_right
