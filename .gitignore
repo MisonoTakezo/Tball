@@ -1,0 +1,20 @@
+# ZMK Build artifacts
+build/
+.west/
+
+# Dependencies downloaded by west
+zmk/
+zephyr/
+modules/
+zmk-driver-paw3222-alpha/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log

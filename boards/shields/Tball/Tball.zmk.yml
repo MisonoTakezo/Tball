@@ -1,7 +1,7 @@
 
 file_format: "1"
-id: 1748156175108
-name: 1748156175108
+id: Tball
+name: Tball
 type: shield
 features:
   - keys
@@ -10,5 +10,5 @@ outputs:
   - usb
   - ble
 siblings:
-  - 1748156175108_left
-  - 1748156175108_right
+  - Tball_left
+  - Tball_right
