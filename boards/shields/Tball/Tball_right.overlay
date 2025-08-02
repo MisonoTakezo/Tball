@@ -91,7 +91,8 @@
         
         /* PAW3222 設定 */
         res-cpi = <800>;               /* メインCPI: 800 */
-        snipe-layers = <1>;            /* スナイプレイヤー: 1 */
+        snipe-cpi = <400>;             /* スナイプ時のCPI: 400 */
+        snipe-layer = <1>;            /* スナイプレイヤー: 1 */
         scroll-layer = <3>;            /* スクロールレイヤー: 3 */
 
         scroll-tick = <10>;            /* スクロール感度　*/
