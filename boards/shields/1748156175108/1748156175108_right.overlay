@@ -87,6 +87,17 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+        
+        /* PAW3222 設定 */
+        res-cpi = <800>;               /* メインCPI: 800 */
+        snipe-layers = <1>;            /* スナイプレイヤー: 1 */
+        scroll-layer = <3>;            /* スクロールレイヤー: 3 */
+
+        scroll-tick = <10>;            /* スクロール感度　*/
+        
+        rotation = <0>;                /*  (0, 90, 180, 270) */
+        
+        force-awake;                   /* 常時起動 */
     };
 };
 
