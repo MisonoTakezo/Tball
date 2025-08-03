@@ -90,8 +90,7 @@
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
         
         /* PAW3222 設定 */
-        res-cpi = <800>;               /* メインCPI: 800 */
-        snipe-cpi = <100>;             /* スナイプ時のCPI: 100 */
+        res-cpi = <608>;               /* メインCPI: 800 */
         snipe-layer = <1>;            /* スナイプレイヤー: 1 */
         scroll-layer = <3>;            /* スクロールレイヤー: 3 */
 
