@@ -45,8 +45,13 @@
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-                          <&zip_xy_scaler 2 2>;  /* X, Y方向を2倍にスケール */
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_x_scaler 4 5>, <&zip_y_scaler 10 10>;
+
+        scroller {
+            layers = <3>;
+            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>, <&zip_scroll_scaler 1 256>;
+            process-next;
+        };
     };
 };
 
@@ -86,18 +91,8 @@
         status = "okay";
         compatible = "pixart,paw3222";
         reg = <0>;
-        spi-max-frequency = <4000000>;
+        spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
-        
-        /* PAW3222 設定 */
-        res-cpi = <608>;               /* メインCPI: 800 */
-        snipe-layer = <4>;            /* スナイプレイヤー: 1 */
-        scroll-layer = <3>;            /* スクロールレイヤー: 3 */
-
-        scroll-tick = <10>;            /* スクロール感度　*/
-        
-        rotation = <0>;                /*  (0, 90, 180, 270) */
-        
         force-awake;                   /* 常時起動 */
     };
 };
